@@ -78,6 +78,12 @@ const App = () => {
         setTimeout(() => {
           setNotifiaction(null);
         }, 4000);
+      })
+      .catch(error => {
+        setNotifiaction({message: `${error}`})
+        setTimeout(() => {
+          setNotifiaction(null);
+        }, 4000);
       });
     }
   }
